@@ -1,0 +1,64 @@
+
+.animation{
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+}
+.pre-animation{
+  opacity:0;
+  visibility: hidden;
+  &.animation--fade{
+    opacity:0;
+    visibility: hidden;
+  }
+  &.animation--dir-right{
+    -webkit-transform: translateX(20%);
+    -moz-transform:  translateX(20%);
+    -ms-transform:  translateX(20%);
+    -o-transform:  translateX(20%);
+    transform:  translateX(20%);
+  }
+  &.animation--dir-left{
+    -webkit-transform: translateX(-20%);
+    -moz-transform:  translateX(-20%);
+    -ms-transform:  translateX(-20%);
+    -o-transform:  translateX(-20%);
+    transform:  translateX(-20%);
+  }
+  &.animation--dir-top{
+    -webkit-transform: translateY(-20%);
+    -moz-transform:  translateY(-20%);
+    -ms-transform:  translateY(-20%);
+    -o-transform:  translatey(-20%);
+    transform:  translateY(-20%);
+  }
+  &.animation--dir-bottom{
+    -webkit-transform: translateY(20%);
+    -moz-transform:  translateY(20%);
+    -ms-transform:  translateY(20%);
+    -o-transform:  translateY(20%);
+    transform:  translateY(20%);
+  }
+}
+.animation{
+  &.animation--fade{
+    opacity:1;
+    visibility: visible;
+  }
+  &.animation--dir-right, &.animation--dir-left{
+    -webkit-transform: translateX(0);
+    -moz-transform:  translateX(0);
+    -ms-transform:  translateX(0);
+    -o-transform:  translateX(0);
+    transform:  translateX(0);
+  }
+  &.animation--dir-top, &.animation--dir-bottom{
+    -webkit-transform: translateY(0);
+    -moz-transform:  translateY(0);
+    -ms-transform:  translateY(0);
+    -o-transform:  translateY(0);
+    transform:  translateY(0);
+  }
+}
